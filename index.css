@@ -5,8 +5,12 @@ body
   font-family: sans-serif;
 }
 
-slideImage
+.slideImage
 {
-  position: absolute;
+  background-color: lime;
+  padding: 10%;
+  width: 50%;
+  height: 50%;
+  position: relative;
 
 }

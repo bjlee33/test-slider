@@ -15,7 +15,7 @@ class SlideImage extends React.Component
     const current = this.props.current;
     return (
       <div className="slideImage">
-        <img src={images[current]} width="50%" height="50%" onClick={this.props.onClick}/>
+        <img src={images[current]} width="100%" height="100%" onClick={this.props.onClick}/>
       </div>
     );
   } // end of render()
