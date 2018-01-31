@@ -7,28 +7,17 @@ class SlideImage extends React.Component
 {
   render()
   {
-    const current = this.props.current;
+    var images = Array(3);
+    images[0] = "https://upload.wikimedia.org/wikipedia/commons/d/de/Bullfinch_male.jpg";
+    images[1] = "https://upload.wikimedia.org/wikipedia/commons/a/a7/Pyrrhula_pyrrhula_female_2.jpg";
+    images[2] = "https://fthmb.tqn.com/HCi13a3w_O2a6gsLijdXpanjQfk=/960x0/filters:no_upscale()/java-finch-145094868-resized-58ad91225f9b58a3c97a5bfa.jpg";
 
-    if (current === 0)
-    {
-      return (
-        <div className="slideImage">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Bullfinch_male.jpg" width="50%" height="50%" onClick={this.props.onClick}/>
-        </div>
-      );
-    } else if (current === 1) {
-        return (
-        <div className="slideImage">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Pyrrhula_pyrrhula_female_2.jpg" width="50%" height="50%" onClick={this.props.onClick}/>
-        </div>
-        );
-    } else {
-        return (
-        <div className="slideImage">
-          <img src="https://fthmb.tqn.com/HCi13a3w_O2a6gsLijdXpanjQfk=/960x0/filters:no_upscale()/java-finch-145094868-resized-58ad91225f9b58a3c97a5bfa.jpg" width="50%" height="50%" onClick={this.props.onClick}/>
-        </div>
-        );
-    }// enf if
+    const current = this.props.current;
+    return (
+      <div className="slideImage">
+        <img src={images[current]} width="50%" height="50%" onClick={this.props.onClick}/>
+      </div>
+    );
   } // end of render()
 } // end slideImage
 
